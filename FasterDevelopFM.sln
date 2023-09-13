@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Middleware.RateLimit", "FasterDevelopFM.Middleware.RateLimit\FasterDevelopFM.Middleware.RateLimit.csproj", "{4E996364-B14B-4538-A210-1E6382F20C17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E996364-B14B-4538-A210-1E6382F20C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E996364-B14B-4538-A210-1E6382F20C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E996364-B14B-4538-A210-1E6382F20C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E996364-B14B-4538-A210-1E6382F20C17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D03145D-9F76-4C81-A7B8-A079DF06C23C}
+	EndGlobalSection
+EndGlobal
