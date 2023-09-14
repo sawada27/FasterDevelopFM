@@ -13,6 +13,11 @@
             services.AddTransient<IRateLimitProvider, MinuteIpPathRateLimitProvider>();
         }
 
+        /// <summary>
+        /// 配置默认次数，存储方式
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="config"></param>
         private static void AddDefaultRateLimiting(this IServiceCollection services, IConfiguration config)
         {
             services.Configure<RateLimitingOption>(config.GetSection("RateLimiting"));
