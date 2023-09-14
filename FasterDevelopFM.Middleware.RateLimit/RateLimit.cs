@@ -1,31 +1,9 @@
 ﻿namespace FasterDevelopFM.Middleware.RateLimit
 {
-    /// <summary>
-    /// 最根本的基类
-    /// </summary>
-    public interface IRateLimit
-    {
-        /// <summary>
-        /// 限流标识键
-        /// </summary>
-        string Key { get; }
-
-        /// <summary>
-        /// 检查是否限流  true不用 false要
-        /// </summary>
-        /// <returns></returns>
-        bool Check();
-
-        /// <summary>
-        /// 调用后行为定义
-        /// </summary>
-        void Call();
-
-    }
 
 
 
-    public abstract class RateLimiting : IRateLimit
+    public abstract class BaseRateLimit : IRateLimit
     {
         /// <summary>
         /// 当前请求次数
@@ -60,7 +38,7 @@
         /// </summary>
         public string Key => _key;
 
-        public RateLimiting(string key, int limit = 500)
+        public BaseRateLimit(string key, int limit = 500)
         {
             _limit = limit;
             _key = key;
@@ -106,7 +84,7 @@
     /// <summary>
     /// 简单分钟限制
     /// </summary>
-    public class MinuteRateLimiting : RateLimiting
+    public class MinuteRateLimiting : BaseRateLimit
     {
         public MinuteRateLimiting(string key, int limit = 100)
             : base(key, limit)
@@ -121,19 +99,6 @@
         }
     }
 
-    public class MinuteIpPathRateLimitProvider : IRateLimitProvider
-    {
-        //创建对象
-        public IRateLimit CreateRateLimit(HttpContext context, int max)
-        {
-            if (max <= 0)
-            {
-                max = int.MaxValue;
-            }
-
-            return new MinuteRateLimiting($"{context.Connection.RemoteIpAddress}:{context.Request.Path}", max);
-        }
-    }
 
 
 }
