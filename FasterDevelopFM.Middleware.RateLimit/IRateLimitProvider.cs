@@ -1,4 +1,6 @@
-﻿namespace FasterDevelopFM.Middleware.RateLimit
+﻿using Microsoft.AspNetCore.Http;
+
+namespace FasterDevelopFM.Middleware.RateLimit
 {
     public interface IRateLimitProvider
     {

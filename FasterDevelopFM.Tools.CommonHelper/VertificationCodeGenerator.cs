@@ -1,8 +1,8 @@
-﻿using FasterDevelopFM.Tools.CommonHelper.Model;
+﻿using FasterDevelopFM.Tools.VertificationCodeGenerator.Model;
 using SkiaSharp;
 using System;
 
-namespace FasterDevelopFM.Tools.CommonHelper
+namespace FasterDevelopFM.Tools.VertificationCodeGenerator
 {
     public class VertificationCodeGenerator
     {

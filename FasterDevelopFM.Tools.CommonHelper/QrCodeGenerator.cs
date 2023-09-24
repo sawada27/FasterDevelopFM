@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Reflection.Metadata;
 
-namespace FasterDevelopFM.Tools.CommonHelper
+namespace FasterDevelopFM.Tools.VertificationCodeGenerator
 {
     public static class QrCodeGenerator
     {
@@ -24,7 +24,7 @@ namespace FasterDevelopFM.Tools.CommonHelper
 
             //File.WriteAllText("qrcode.svg", svg, Encoding.UTF8);
 
-            var skBitMap =  qr.ToBitmap(10, 2);
+            var skBitMap = qr.ToBitmap(10, 2);
 
             using var img = SKImage.FromBitmap(skBitMap);
             using var data = img.Encode(SKEncodedImageFormat.Jpeg, 100);
@@ -60,7 +60,7 @@ namespace FasterDevelopFM.Tools.CommonHelper
     /// </summary>
     public static class QrCodeBitmapExtensions
     {
-       
+
         public static SKBitmap ToBitmap(this QrCode qrCode, int scale, int border, SKColor foreground, SKColor background)
         {
             // 参数检查

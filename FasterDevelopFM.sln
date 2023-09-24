@@ -5,11 +5,15 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Middleware.RateLimit", "FasterDevelopFM.Middleware.RateLimit\FasterDevelopFM.Middleware.RateLimit.csproj", "{4E996364-B14B-4538-A210-1E6382F20C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Tools.VertificationCodeGenerator", "FasterDevelopFM.Tools.CommonHelper\FasterDevelopFM.Tools.VertificationCodeGenerator.csproj", "{61CA57D0-6C69-40C7-B058-EB9F85A1F512}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Tools.VertificationCodeGenerator", "FasterDevelopFM.Tools.CommonHelper\FasterDevelopFM.Tools.VertificationCodeGenerator.csproj", "{61CA57D0-6C69-40C7-B058-EB9F85A1F512}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Tools.OfficeHelper", "FasterDevelopFM.Tools.OfficeHelper\FasterDevelopFM.Tools.OfficeHelper.csproj", "{CBE3E4BF-1667-483C-8331-1C81EC044A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Tools.OfficeHelper", "FasterDevelopFM.Tools.OfficeHelper\FasterDevelopFM.Tools.OfficeHelper.csproj", "{CBE3E4BF-1667-483C-8331-1C81EC044A65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Infrastructure", "FasterDevelopFM.Infrastructure\FasterDevelopFM.Infrastructure.csproj", "{78CDDAE9-7597-4050-A51D-676588DF288B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Infrastructure", "FasterDevelopFM.Infrastructure\FasterDevelopFM.Infrastructure.csproj", "{78CDDAE9-7597-4050-A51D-676588DF288B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Tools.Encryption", "FasterDevelopFM.Tools.Encryption\FasterDevelopFM.Tools.Encryption.csproj", "{12261034-183B-4726-866B-18E2B820CAC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.Cache.Redis", "FasterDevelopFM.Services.Cache.Redis\FasterDevelopFM.Services.Cache.Redis.csproj", "{CFABEE5F-3877-4826-83E8-05ED1D780FBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{78CDDAE9-7597-4050-A51D-676588DF288B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78CDDAE9-7597-4050-A51D-676588DF288B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78CDDAE9-7597-4050-A51D-676588DF288B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12261034-183B-4726-866B-18E2B820CAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12261034-183B-4726-866B-18E2B820CAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12261034-183B-4726-866B-18E2B820CAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12261034-183B-4726-866B-18E2B820CAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFABEE5F-3877-4826-83E8-05ED1D780FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFABEE5F-3877-4826-83E8-05ED1D780FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFABEE5F-3877-4826-83E8-05ED1D780FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFABEE5F-3877-4826-83E8-05ED1D780FBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

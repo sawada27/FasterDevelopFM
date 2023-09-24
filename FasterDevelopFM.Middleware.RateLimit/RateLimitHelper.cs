@@ -1,4 +1,7 @@
-﻿namespace FasterDevelopFM.Middleware.RateLimit
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace FasterDevelopFM.Middleware.RateLimit
 {
 
     public static class RateLimitHelper

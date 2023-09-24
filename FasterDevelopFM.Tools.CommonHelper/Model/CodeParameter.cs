@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FasterDevelopFM.Tools.CommonHelper.Model
+namespace FasterDevelopFM.Tools.VertificationCodeGenerator.Model
 {
     public class CodeParamter
     {
