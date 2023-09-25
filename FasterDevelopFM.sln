@@ -11,9 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Tools.Offic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Infrastructure", "FasterDevelopFM.Infrastructure\FasterDevelopFM.Infrastructure.csproj", "{78CDDAE9-7597-4050-A51D-676588DF288B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Tools.Encryption", "FasterDevelopFM.Tools.Encryption\FasterDevelopFM.Tools.Encryption.csproj", "{12261034-183B-4726-866B-18E2B820CAC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Tools.Encryption", "FasterDevelopFM.Tools.Encryption\FasterDevelopFM.Tools.Encryption.csproj", "{12261034-183B-4726-866B-18E2B820CAC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.Cache.Redis", "FasterDevelopFM.Services.Cache.Redis\FasterDevelopFM.Services.Cache.Redis.csproj", "{CFABEE5F-3877-4826-83E8-05ED1D780FBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Services.Cache.Redis", "FasterDevelopFM.Services.Cache.Redis\FasterDevelopFM.Services.Cache.Redis.csproj", "{CFABEE5F-3877-4826-83E8-05ED1D780FBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.File.Local", "FasterDevelopFM.Services.File.Local\FasterDevelopFM.Services.File.Local.csproj", "{0233E9A5-A094-463F-85ED-6341D1BE2EFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.File.Minio", "FasterDevelopFM.Services.File.Minio\FasterDevelopFM.Services.File.Minio.csproj", "{78863C56-B723-45BC-8FAB-7D979FD29666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.File.AliOss", "FasterDevelopFM.Services.File.AliOss\FasterDevelopFM.Services.File.AliOss.csproj", "{40B0EE60-18E4-450A-BCBE-FC28DC23F918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.File.Abstract", "FasterDevelopFM.Services.File.Abstract\FasterDevelopFM.Services.File.Abstract.csproj", "{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +53,22 @@ Global
 		{CFABEE5F-3877-4826-83E8-05ED1D780FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFABEE5F-3877-4826-83E8-05ED1D780FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFABEE5F-3877-4826-83E8-05ED1D780FBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0233E9A5-A094-463F-85ED-6341D1BE2EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0233E9A5-A094-463F-85ED-6341D1BE2EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0233E9A5-A094-463F-85ED-6341D1BE2EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0233E9A5-A094-463F-85ED-6341D1BE2EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78863C56-B723-45BC-8FAB-7D979FD29666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78863C56-B723-45BC-8FAB-7D979FD29666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78863C56-B723-45BC-8FAB-7D979FD29666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78863C56-B723-45BC-8FAB-7D979FD29666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B0EE60-18E4-450A-BCBE-FC28DC23F918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B0EE60-18E4-450A-BCBE-FC28DC23F918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B0EE60-18E4-450A-BCBE-FC28DC23F918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B0EE60-18E4-450A-BCBE-FC28DC23F918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
