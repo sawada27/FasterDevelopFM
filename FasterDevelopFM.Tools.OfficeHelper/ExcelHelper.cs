@@ -14,7 +14,7 @@ namespace FasterDevelopFM.Tools.OfficeHelper
 {
 
     /// <summary>
-    /// 提供 Excel 读取、写入功能。此类不可被继承
+    /// 提供 Excel 读取、写入功能。
     /// </summary>
     public sealed class ExcelHelper
     {

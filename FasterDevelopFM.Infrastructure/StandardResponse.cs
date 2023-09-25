@@ -6,6 +6,21 @@ namespace FasterDevelopFM.Infrastructure
 {
     public class StandardResponseBase<T>
     {
+        public StandardResponseBase() { 
+        
+
+        }
+
+        public StandardResponseBase(string errorMessage)
+        {
+            Code = 500;
+        }
+
+        public StandardResponseBase(int code,string message)
+        {
+            Code = code;
+            Message = message;
+        }
         /// <summary>
         /// 数据
         /// </summary>
@@ -26,10 +41,6 @@ namespace FasterDevelopFM.Infrastructure
         /// 跟踪ID
         /// </summary>
         public string TraceId { get; internal set; } = Guid.NewGuid().ToString();
-        /// <summary>
-        /// 时间
-        /// </summary>
-        public object Time { get; set; }
         /// <summary>
         /// 错误列表
         /// </summary>

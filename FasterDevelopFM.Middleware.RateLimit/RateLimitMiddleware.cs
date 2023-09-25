@@ -28,7 +28,7 @@ namespace FasterDevelopFM.Middleware.RateLimit
         private readonly RequestDelegate _next;
 
         /// <summary>
-        /// 
+        /// 限流处理对象
         /// </summary>
         private readonly IRateLimitHandler _rateLimitHandler;
 
@@ -46,7 +46,7 @@ namespace FasterDevelopFM.Middleware.RateLimit
         /// </summary>
         private RateLimitingOption _option;
         /// <summary>
-        /// 日志记录中间件，用于记录访问日志
+        /// 限流中间件
         /// </summary>
         public RateLimitMiddleware(ILogger<RateLimitMiddleware> logger, IOptions<RateLimitingOption> options, IRateLimitProvider factory,  RequestDelegate next,IRateLimitHandler rateLimitHandler)
         {

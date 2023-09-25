@@ -10,7 +10,8 @@ namespace FasterDevelopFM.Middleware.RateLimit
         {
             if (max <= 0)
             {
-                max = int.MaxValue;
+                throw new ArgumentOutOfRangeException("limit count parameter must be greater than zero",nameof(max));
+                //max = int.MaxValue;
             }
 
             return new MinuteRateLimiting($"{context.Connection.RemoteIpAddress}:{context.Request.Path}", max);
