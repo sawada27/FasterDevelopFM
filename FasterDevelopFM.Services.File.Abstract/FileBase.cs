@@ -81,6 +81,11 @@
         /// </summary>
         public string BucketName { get; set; }
 
+        /// <summary>
+        /// 网络位置 服务器IP
+        /// </summary>
+        public string FileLocation { get; set; }
+
     }
 
 

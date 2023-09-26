@@ -28,60 +28,69 @@ namespace FasterDevelopFM.Services.File.Minio
         /// <returns></returns>
         public async Task<FileBase> UploadFile(IFormFile file, string bucketName = "")
         {
-            var folderYear = DateTime.Now.ToString("yyyy");
-            var folderMonth = DateTime.Now.ToString("MM");
-            var folderDay = DateTime.Now.ToString("dd");
-            bucketName = !string.IsNullOrWhiteSpace(bucketName) ? bucketName : folderYear;
-            // 找到bucket，如果不存在则创建
-            var beArgs = new BucketExistsArgs().WithBucket((string)bucketName);
-            bool found = await _minioClient.BucketExistsAsync(beArgs);
-            if (!found)
+            var fileName = file.FileName;
+            try
             {
-                var mbArgs = new MakeBucketArgs().WithBucket((string)bucketName).WithObjectLock();
-                await _minioClient.MakeBucketAsync(mbArgs);
-            }
-            if (file != null && file.Length > 0 && file.Length < 100 * MB)
-            {
-                var fileName = file.FileName;
-
-                var ext = Path.GetExtension(fileName).ToLower();
-                string newName = $"{folderYear}/{folderMonth}/{folderDay}/{fileName}{ext}";
-
-                //缩略图 暂定
-                //string thumbnailName = "";
-                //if (ext.Contains(".jpg") || ext.Contains(".jpeg") || ext.Contains(".png") || ext.Contains(".bmp") || ext.Contains(".gif"))
-                //{
-                //    thumbnailName = $"{folderMonth}/{folderDay}/{GenerateId.GenerateOrderNumber() + ext}";
-                //}
-
-                //contentType获取待定
-                var contentType = string.Empty;
-
-                using (var binaryReader = new BinaryReader(file.OpenReadStream()))
+                var folderYear = DateTime.Now.ToString("yyyy");
+                var folderMonth = DateTime.Now.ToString("MM");
+                var folderDay = DateTime.Now.ToString("dd");
+                bucketName = !string.IsNullOrWhiteSpace(bucketName) ? bucketName : folderYear;
+                // 找到bucket，如果不存在则创建
+                var beArgs = new BucketExistsArgs().WithBucket((string)bucketName);
+                bool found = await _minioClient.BucketExistsAsync(beArgs);
+                if (!found)
                 {
-                    var putObjectArgs = new PutObjectArgs().WithBucket(bucketName)
-                    .WithObject(newName)
-                .WithStreamData(binaryReader.BaseStream)
-                .WithObjectSize(binaryReader.BaseStream.Length)
-                .WithContentType(contentType);
-                    await _minioClient.PutObjectAsync(putObjectArgs);
-
+                    var mbArgs = new MakeBucketArgs().WithBucket((string)bucketName).WithObjectLock();
+                    await _minioClient.MakeBucketAsync(mbArgs);
                 }
-                return new FileBase
+
+                if (file != null && file.Length > 0 && file.Length < 100 * MB)
                 {
-                    FilePath = newName,
-                    BucketName = bucketName,
-                    FileName = fileName,
-                    FileSize = file.Length,
-                    FileType = contentType ?? "",
-                    Extension = Path.GetExtension(fileName),
-                    UploadMode = "Minio"
-                };
+                    var ext = Path.GetExtension(fileName).ToLower();
+                    string newName = $"{folderYear}/{folderMonth}/{folderDay}/{fileName}{ext}";
+
+                    //缩略图 暂定
+                    //string thumbnailName = "";
+                    //if (ext.Contains(".jpg") || ext.Contains(".jpeg") || ext.Contains(".png") || ext.Contains(".bmp") || ext.Contains(".gif"))
+                    //{
+                    //    thumbnailName = $"{folderMonth}/{folderDay}/{GenerateId.GenerateOrderNumber() + ext}";
+                    //}
+
+                    //todo: contentType获取待定  FileExtensionContentTypeProvider() or 帮助类 (未测试linux)
+                    var contentType = string.Empty;
+
+                    using (var binaryReader = new BinaryReader(file.OpenReadStream()))
+                    {
+                        var putObjectArgs = new PutObjectArgs().WithBucket(bucketName)
+                        .WithObject(newName)
+                    .WithStreamData(binaryReader.BaseStream)
+                    .WithObjectSize(binaryReader.BaseStream.Length)
+                    .WithContentType(contentType);
+                        await _minioClient.PutObjectAsync(putObjectArgs);
+
+                    }
+                    return new FileBase
+                    {
+                        FilePath = newName,
+                        BucketName = bucketName,
+                        FileName = fileName,
+                        FileSize = file.Length,
+                        FileType = contentType ?? "",
+                        Extension = Path.GetExtension(fileName),
+                        UploadMode = "Minio"
+                    };
+                }
+                else
+                {
+                    throw new Exception($"文件{fileName}上传失败，文件过大");
+                }
             }
-            else
+            catch (Exception e)
             {
-                throw new Exception("文件过大");
+                //抛出给外层捕获 可记录其他上传信息 本方法不做处理
+                throw new Exception($"文件{fileName}上传失败，原因{e.Message}", e);
             }
+
         }
 
         /// <summary>
