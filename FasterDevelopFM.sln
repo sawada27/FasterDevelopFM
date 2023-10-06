@@ -15,13 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Tools.Encry
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Services.Cache.Redis", "FasterDevelopFM.Services.Cache.Redis\FasterDevelopFM.Services.Cache.Redis.csproj", "{CFABEE5F-3877-4826-83E8-05ED1D780FBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.File.Local", "FasterDevelopFM.Services.File.Local\FasterDevelopFM.Services.File.Local.csproj", "{0233E9A5-A094-463F-85ED-6341D1BE2EFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Services.File.Local", "FasterDevelopFM.Services.File.Local\FasterDevelopFM.Services.File.Local.csproj", "{0233E9A5-A094-463F-85ED-6341D1BE2EFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.File.Minio", "FasterDevelopFM.Services.File.Minio\FasterDevelopFM.Services.File.Minio.csproj", "{78863C56-B723-45BC-8FAB-7D979FD29666}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Services.File.Minio", "FasterDevelopFM.Services.File.Minio\FasterDevelopFM.Services.File.Minio.csproj", "{78863C56-B723-45BC-8FAB-7D979FD29666}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.File.AliOss", "FasterDevelopFM.Services.File.AliOss\FasterDevelopFM.Services.File.AliOss.csproj", "{40B0EE60-18E4-450A-BCBE-FC28DC23F918}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Services.File.AliOss", "FasterDevelopFM.Services.File.AliOss\FasterDevelopFM.Services.File.AliOss.csproj", "{40B0EE60-18E4-450A-BCBE-FC28DC23F918}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.File.Abstract", "FasterDevelopFM.Services.File.Abstract\FasterDevelopFM.Services.File.Abstract.csproj", "{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Services.File.Abstract", "FasterDevelopFM.Services.File.Abstract\FasterDevelopFM.Services.File.Abstract.csproj", "{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Middleware.Cors", "FasterDevelopFM.Middleware.Cors\FasterDevelopFM.Middleware.Cors.csproj", "{A5A71551-F310-4AA2-9C57-8D25C0CEBE77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.WebSocket", "FasterDevelopFM.Services.SignalR\FasterDevelopFM.Services.WebSocket.csproj", "{04443711-5337-4CFD-B0A4-49C65A0318FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A71551-F310-4AA2-9C57-8D25C0CEBE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A71551-F310-4AA2-9C57-8D25C0CEBE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A71551-F310-4AA2-9C57-8D25C0CEBE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A71551-F310-4AA2-9C57-8D25C0CEBE77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04443711-5337-4CFD-B0A4-49C65A0318FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04443711-5337-4CFD-B0A4-49C65A0318FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04443711-5337-4CFD-B0A4-49C65A0318FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04443711-5337-4CFD-B0A4-49C65A0318FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
