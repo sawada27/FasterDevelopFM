@@ -23,9 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Services.Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Services.File.Abstract", "FasterDevelopFM.Services.File.Abstract\FasterDevelopFM.Services.File.Abstract.csproj", "{6F8278B1-F2D1-4C8B-9B0B-C7E8D18665ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Middleware.Cors", "FasterDevelopFM.Middleware.Cors\FasterDevelopFM.Middleware.Cors.csproj", "{A5A71551-F310-4AA2-9C57-8D25C0CEBE77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Middleware.Cors", "FasterDevelopFM.Middleware.Cors\FasterDevelopFM.Middleware.Cors.csproj", "{A5A71551-F310-4AA2-9C57-8D25C0CEBE77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.WebSocket", "FasterDevelopFM.Services.SignalR\FasterDevelopFM.Services.WebSocket.csproj", "{04443711-5337-4CFD-B0A4-49C65A0318FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FasterDevelopFM.Services.WebSocket", "FasterDevelopFM.Services.SignalR\FasterDevelopFM.Services.WebSocket.csproj", "{04443711-5337-4CFD-B0A4-49C65A0318FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Tools.Diagnostics", "FasterDevelopFM.Tools.Diagnostics\FasterDevelopFM.Tools.Diagnostics.csproj", "{F4D4D487-23CC-4012-A6B0-51B2EF66D685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FasterDevelopFM.Services.Task.Hangfire", "FasterDevelopFM.Services.Task.Hangfire\FasterDevelopFM.Services.Task.Hangfire.csproj", "{436801C5-E100-4D37-BA0E-97F4B7769F70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,14 @@ Global
 		{04443711-5337-4CFD-B0A4-49C65A0318FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04443711-5337-4CFD-B0A4-49C65A0318FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04443711-5337-4CFD-B0A4-49C65A0318FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4D4D487-23CC-4012-A6B0-51B2EF66D685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4D4D487-23CC-4012-A6B0-51B2EF66D685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4D4D487-23CC-4012-A6B0-51B2EF66D685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4D4D487-23CC-4012-A6B0-51B2EF66D685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{436801C5-E100-4D37-BA0E-97F4B7769F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436801C5-E100-4D37-BA0E-97F4B7769F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436801C5-E100-4D37-BA0E-97F4B7769F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{436801C5-E100-4D37-BA0E-97F4B7769F70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
